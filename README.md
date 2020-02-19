@@ -12,7 +12,7 @@ You need to:
 
 1 - Clone repository
 2 - run npm install
-3 - add above
+3 - uncomment "run locally" code in src/context in the componentdidmount function and comment out "this.getData()"
 4 - run npm start
 
 ## Live project
