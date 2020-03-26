@@ -28,7 +28,6 @@ class RoomProvider extends Component {
           let response = await Client.getEntries({
             content_type: 'beachResortRoomExample',
           });
-          console.log(response);
           let rooms = this.formatData(response.items);
           let featuredRooms = rooms.filter(room => room.featured === true);
           let maxPrice = Math.max(...rooms.map(item => item.price));
@@ -72,7 +71,6 @@ class RoomProvider extends Component {
         let tempItems = items.map(item => {
           let id = item.sys.id;
           let images = item.fields.images.map(image => (
-            console.log(image),
             image.fields.file.url
             ));
           let room = { ...item.fields, images, id }
